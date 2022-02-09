@@ -7,12 +7,18 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="/js/calculation.js"></script>
+    <script src="/script.js"></script>
 </head>
 
-<body class="gradient">
+<body class="theme-dark">
     <div class="container align-items-center">
         <div class="row align-items-center ">
                 <div class="col-12 borders mx-auto">
+                    <select id="theme">
+                        <option value="auto">Auto</option>
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                    </select>
                     <form name="calc">
                         <table class="mx-auto">
                             <tr class="display">
@@ -47,8 +53,13 @@
                     </form>
                     <br>
                 </div>
-                <div class="col-2 borders">
-                        <p id="result"></p>
+
+            <div class="something big bg-dark " id="tester" name="tester">
+
+            </div>
+                <div class="col-2 borders ">
+
+                        <!--<p id="result"></p>-->
                 </div>
 
         </div>
