@@ -1,0 +1,17 @@
+body {
+    background: #222222 !important;
+}
+
+.container {
+    background: #222222 !important;
+}
+
+.calc {
+    background: #222222 !important;
+}
+
+
+.theme {
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(39,38,40,0.4);
+}
