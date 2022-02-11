@@ -1,17 +1,24 @@
 body {
-    background: #222222 !important;
+    background: #212020 !important;
 }
 
 .container {
-    background: #222222 !important;
+    background: #212020 !important;
 }
 
 .calc {
-    background: #222222 !important;
+    background: #212020 !important;
+    transition: .5s all;
 }
 
 
 .theme {
-    background: #ffffff;
-    box-shadow: 0 0 10px rgba(39,38,40,0.4);
+
+    background: #ffffff !important;
+    box-shadow: 0 0 10px rgba(39,38,40,0.4) !important;
+    transition: .3s all;
+}
+
+.results {
+    color: white;
 }

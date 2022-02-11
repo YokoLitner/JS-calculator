@@ -8,10 +8,17 @@ body {
 
 .calc {
     background: #ffffff !important;
+    transition: .5s all;
 }
 
 
 .theme {
-    background: #222222;
-    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+
+    background: #222222 !important;
+    box-shadow: 0 0 10px rgba(255,255,255,0.1) !important;
+    transition: .3s all;
+}
+
+.results {
+    color: black;
 }

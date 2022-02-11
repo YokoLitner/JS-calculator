@@ -27,9 +27,17 @@ html, body {
 }
 
 .row {
-    height: inherit;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
-    height: inherit;
+    height: 100%;
+}
+
+.results {
+    overflow:scroll;
+}
+.results::-webkit-scrollbar {
+    width: 0;
 }

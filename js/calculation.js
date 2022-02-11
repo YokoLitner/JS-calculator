@@ -1,4 +1,4 @@
-
+var allExpression = [];
 
 const separators = [' ', '\\\+', '-', '\\*', '/', ':'];
 function calculation(){
@@ -19,9 +19,12 @@ function calculation(){
     }else{
         var result;
         console.log((eval(expression)).toFixed(5));
-        result = (eval(expression)).toFixed(5);
-        document.getElementById("result").innerHTML = result;
-
+        result = (eval(expression));
+        allExpression.push(expression);
+        allExpression.push('= '+result);
+        allExpression.push('</br>');
+        document.getElementById("result").innerHTML = allExpression.join('');
+        document.getElementById("expression").value = "";
     }
 }
 
