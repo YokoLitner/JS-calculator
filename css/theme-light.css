@@ -1,18 +1,19 @@
 body {
     background: #212020 !important;
+    transition: .3s all;
 }
 
 .container {
     background: #212020 !important;
+    transition: .3s all;
 }
 
 .calc {
     background: #212020 !important;
-    transition: .5s all;
+    transition: .3s all;
 }
 
 .theme {
-
     background: #ffffff !important;
     box-shadow: 0 0 10px rgba(39,38,40,0.4) !important;
     transition: .3s all;
@@ -20,4 +21,5 @@ body {
 
 .results {
     color: white;
+    transition: .3s all;
 }
