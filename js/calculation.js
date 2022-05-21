@@ -1,13 +1,13 @@
-var allExpression = [];
+let allExpression = [];
 
 const separators = [' ', '\\\+', '-', '\\*', '/', ':'];
 function calculation(){
 
-    var expression = String(document.getElementById("expression").value);
-    var testExpression = expression.split(new RegExp(separators.join('|'), 'g'));
+    let expression = String(document.getElementById("expression").value);
+    let testExpression = expression.split(new RegExp(separators.join('|'), 'g'));
     console.log(testExpression);
 
-    var thereAreLetters = 0;
+    let thereAreLetters = 0;
     testExpression.forEach(function(item,i,arr) {
         if(isNaN(item)){
             thereAreLetters++;
@@ -17,7 +17,7 @@ function calculation(){
     if(Number(thereAreLetters)){
         alert("There are letters or something else");
     }else{
-        var result;
+        let result;
         console.log((eval(expression)).toFixed(5));
         result = (eval(expression));
         allExpression.push(expression);
