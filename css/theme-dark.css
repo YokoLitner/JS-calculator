@@ -1,14 +1,16 @@
 body {
     background: #ffffff !important;
+    transition: .3s all;
 }
 
 .container {
     background: #ffffff !important;
+    transition: .3s all;
 }
 
 .calc {
     background: #ffffff !important;
-    transition: .5s all;
+    transition: .3s all;
 }
 
 .theme {
@@ -20,4 +22,5 @@ body {
 
 .results {
     color: black;
+    transition: .3s all;
 }

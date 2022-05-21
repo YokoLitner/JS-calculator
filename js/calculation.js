@@ -1,31 +1,33 @@
 let allExpression = [];
 
 const separators = [' ', '\\\+', '-', '\\*', '/', ':'];
-function calculation(){
 
+function calculation(){
     let expression = String(document.getElementById("expression").value);
     let testExpression = expression.split(new RegExp(separators.join('|'), 'g'));
     console.log(testExpression);
 
-    let thereAreLetters = 0;
-    testExpression.forEach(function(item,i,arr) {
-        if(isNaN(item)){
-            thereAreLetters++;
+    testExpression.map((value) => {
+        if(isNaN(value)){
+            alert(message.LETTER_IN_EXPRESSION);
+            throw new Error();  
         }
     })
 
-    if(Number(thereAreLetters)){
-        alert("There are letters or something else");
-    }else{
-        let result;
-        console.log((eval(expression)).toFixed(5));
-        result = (eval(expression));
-        allExpression.push(expression);
-        allExpression.push('= '+result);
-        allExpression.push('</br>');
-        document.getElementById("result").innerHTML = allExpression.join('');
-        document.getElementById("expression").value = "";
-    }
+    let result;
+    //console.log((eval(expression)).toFixed(5));
+    try {
+        result = eval(expression);
+    } catch(e) {
+        if (e instanceof SyntaxError) alert(message.CALCULATIO_ERROR);
+        throw new Error();    
+    } 
+    
+    allExpression.push(expression);
+    allExpression.push(' = '+result);
+    allExpression.push('</br>');
+    document.getElementById("result").innerHTML = allExpression.join('');
+    document.getElementById("expression").value = "";
 }
 
 function backspace() {
