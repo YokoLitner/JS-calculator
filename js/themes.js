@@ -8,13 +8,12 @@ changeThemeButtons.forEach(button => {
 });
 
 function applyTheme(themeName) {
-    document.querySelector('[title="theme"]').setAttribute('href', `css/theme-${themeName}.css`); // Помещаем путь к файлу темы в пустой link в head
+    document.querySelector('[title="theme"]').setAttribute('href', `../css/theme-${themeName}.css`); // Помещаем путь к файлу темы в пустой link в head
     changeThemeButtons.forEach(button => {
         button.style.display = 'block'; // Показываем все кнопки смены темы
     });
     document.querySelector(`[data-theme="${themeName}"]`).style.display = 'none'; // Но скрываем кнопку для активной темы
 }
-
 
 let activeTheme = localStorage.getItem('theme'); // Проверяем есть ли в LocalStorage записано значение для 'theme' и присваиваем его переменной.
 
